@@ -24,3 +24,166 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.logo {
+  font-family: 'Flow', cursive;
+  letter-spacing: 0.05em;
+}
+
+.courier-new{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.sans-serif{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.gill-sans{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.monospace{
+  font-family: monospace;
+}
+
+.cursive{
+  font-family: cursive;
+}
+
+.gradient-bg {
+  background: linear-gradient(185deg,#032D46, #000305); /* 20deg, */
+}
+
+.box-bg-gradient {
+  background: linear-gradient(320deg, #033347, #000304);
+}
+
+.rotate-img {
+  animation: rotate 16s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.float-down {
+  animation: floatDown 3s ease-in-out infinite;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-up-down {
+  animation: upDown 3s ease-in-out infinite;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);   /* center */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.container-gradient:hover {
+  background: linear-gradient(
+    320deg, 
+    #102c4f 0%, /* A dark blue color, slightly lighter */
+    #051020 70%, /* A very dark, almost black blue */
+    #000000 100% /* Pure black at the very bottom */
+  );
+  box-shadow: inset 0 0 10px rgba(16, 44, 79, 0.5);
+  border:1px solid #00A9FF;
+  transition: ease-in-out;
+}
+
+.border-box:hover{
+  border: 1px solid #00A9FF
+}
+
+/* Make Antd progress bar animation slow */
+.slow-progress .ant-progress-bg {
+  transition: width 1.5s ease-in-out !important;
+}
+
+.cont-border{
+  border: 2px solid white;
+}
+
+.hoverable-cont:hover{
+  background-color: #072335;
+  box-shadow: 0px 0px 2px #0d4a70;
+  transition: ease-in-out;
+}
+
+.skill-section {
+  background: radial-gradient(
+      circle at top left,
+      rgba(9, 129, 214, 0.839) 0%,   /* bright blue glow */
+      rgba(0, 150, 255, 0.20) 15%,  /* soft blue fade */
+      rgba(0, 150, 255, 0.05) 30%,  /* very light fade */
+      rgb(0, 12, 20) 65%          /* pure black background */
+    );
+}
+
+.footer-section {
+  background: radial-gradient(
+      circle at bottom left,
+      rgba(9, 129, 214, 0.839) 0%,   /* bright blue glow */
+      rgba(0, 150, 255, 0.20) 15%,  /* soft blue fade */
+      rgba(0, 150, 255, 0.05) 30%,  /* very light fade */
+      rgb(0, 12, 20) 65%          /* pure black background */
+    );
+}
+
+.effect-section:hover{
+  background: radial-gradient(
+      circle at top left,
+      rgba(9, 129, 214, 0.839) 0%,   /* bright blue glow */
+      rgba(0, 150, 255, 0.20) 15%,  /* soft blue fade */
+      rgba(0, 150, 255, 0.05) 30%,  /* very light fade */
+      rgb(0, 12, 20) 65%          /* pure black background */
+    );
+    border: 1px solid #12E3E5;
+    transition: ease-in-out;
+}
+
+.neon-shadow {
+  box-shadow:
+    0 0 12px rgba(0, 230, 255, 0.9),   /* inner bright glow */
+    0 0 28px rgba(13, 87, 140, 0.55),  /* mid halo */
+    0 0 55px rgba(13, 87, 140, 0.35);  /* outer large halo */
+}
+
+.input-placeholder::placeholder{
+  color: white !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  font-size: large;
+}
+
+.ant-drawer-close {
+  @apply text-white hover:text-gray-300;
+}
+
+.ant-drawer-close .anticon {
+  font-size: 22px !important;
+}
