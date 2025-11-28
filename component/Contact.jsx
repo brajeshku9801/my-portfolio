@@ -1,6 +1,6 @@
 const Contact = () => {
     return (
-        <div className="text-white text-center">
+        <div className="text-white text-center" id="contact">
             <div className="w-full pb-8">
                 <div className="lg:w-10/12 w-11/12 skill-section mx-auto lg:px-6 px-3 py-16 rounded-xl border border-[#042338]">
                     <div className="flex lg:flex-row md:flex-row flex-col lg:justify-between md:justify-between justify-start py-16 px-4 gap-6">
@@ -51,17 +51,17 @@ const Contact = () => {
                             <h4 className="text-gray-200 font-semibold monospace text-xl md:text-2xl">GET IN TOUCH</h4>
 
                             <form className="flex flex-col my-6 lg:space-y-5 space-y-2">
-                                <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
+                                <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
                                     <input type="text" name="fullname" placeholder="Your name" className="p-4 outline outline-2 outline-transparent focus:outline-[#139BFD] focus:outline-2 rounded-xl border border-[#042338]" required />
                                     <input type="number" name="mobile" placeholder="Phone number" className="outline outline-2 outline-transparent focus:outline-[#139BFD] focus:outline-2 p-4 rounded-xl border border-[#042338]" required />
                                 </div>
 
-                                <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
+                                <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
                                     <input type="email" name="email" placeholder="Your email" className="outline outline-2 outline-transparent focus:outline-[#139BFD] focus:outline-2 p-4 rounded-xl border border-[#042338]" required />
                                     <input type="text" name="subject" placeholder="Your subject" className="outline outline-2 outline-transparent focus:outline-[#139BFD] focus:outline-2 p-4 rounded-xl border border-[#042338]" required />
                                 </div>
 
-                                <div className="w-full mb-6">
+                                <div className="w-full mb-4">
                                     <textarea rows={5} type="text" name="message" placeholder="Your Message" className="outline outline-2 outline-transparent focus:outline-[#139BFD] focus:outline-2 w-full p-4 rounded-xl border border-[#042338]" required></textarea>
                                 </div>
 

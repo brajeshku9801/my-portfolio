@@ -26,22 +26,20 @@ const Homepage = () => {
     useEffect(() => {
         const currentMessage = messages[index];
 
-        // Still typing characters?
         if (charIndex < currentMessage.length) {
             const timeout = setTimeout(() => {
                 setText((prev) => prev + currentMessage[charIndex]);
-                setCharIndex(charIndex + 1);     // next letter
-            }, 220); // typing speed
+                setCharIndex(charIndex + 1);  
+            }, 210);
 
             return () => clearTimeout(timeout);
         }
 
-        // When full message typed → wait → go to next message
         const pause = setTimeout(() => {
             setText("");
             setCharIndex(0);
             setIndex((prev) => (prev + 1) % messages.length); // loop
-        }, 900); // break between words
+        }, 800);
 
         return () => clearTimeout(pause);
     }, [charIndex, index]);
@@ -56,7 +54,7 @@ const Homepage = () => {
         <div className="w-full bg-[#00060A] min-h-full relative">
             <Navbar />
             <div className="w-full gradient-bg py-16">
-                <div className="w-11/12 mx-auto grid grid-cols-12 text-white">
+                <div className="w-11/12 mx-auto grid grid-cols-12 text-white mt-16">
                     <div className="lg:col-span-6 col-span-12 px-2 order-2 lg:order-1">
                         <p className="text-[#13A2FD] font-semibold text-xl gill-sans pt-16">I AM</p>
 
@@ -64,7 +62,7 @@ const Homepage = () => {
 
                         <h1 className="lg:text-6xl md:text-6xl text-4xl font-bold mb-6 text-[#13A2FD] gill-sans animate_animated animate__fadeIn">{text}</h1>
 
-                        <p className="text-2xl gill-sans font-medium text-gray-300">A personal <span className="text-[#13A2FD]">portfolio</span> is a collection of your work, that is achievements, and skills that highlights in your abilities and professional <span className="text-[#13A2FD]">web design</span> growth. It serves as</p>
+                        <p className="lg:text-2xl md:text-2xl text-xl  gill-sans font-medium text-gray-300">A personal <span className="text-[#13A2FD]">portfolio</span> is a collection of your work, that is achievements, and skills that highlights in your abilities and professional <span className="text-[#13A2FD]">web design</span> growth. It serves as</p>
 
                         <button className="bg-transparent px-4 py-3 text-base border border-gray-200 shadow-lg my-8 rounded-full cursor-pointer container-gradient transition-all duration-300 ease-in-out">
                             More About Us <i className="ri-arrow-right-long-line"></i>
@@ -113,8 +111,8 @@ const Homepage = () => {
 
             <Footer />
 
-            <div className="fixed bottom-16 left-4">
-                <div className="w-[50px] h-[50px] fixed bottom-16 left-4 z-[1] bg-[#139BFD] shadow-lg p-4 rounded-full flex justify-center items-center cursor-pointer animate__animated animate__fadeInUp" onClick={() => setToggle(!toggle)}>
+            <div className="fixed bottom-4 left-4">
+                <div className="w-[50px] h-[50px] fixed bottom-4 left-4 z-[1] bg-[#139BFD] shadow-lg p-4 rounded-full flex justify-center items-center cursor-pointer animate__animated animate__fadeInUp" onClick={() => setToggle(!toggle)}>
                     {
                         !toggle ? <i className="ri-messenger-line text-white text-xl"></i> : <i class="ri-close-large-line text-white text-xl"></i>
                     }
@@ -122,14 +120,14 @@ const Homepage = () => {
 
                 {
                     toggle &&
-                    <div className="w-[380px] bg-[#06131B] absolute left-16 -bottom-16 animate__animated animate__fadeInUp rounded-xl">
-                        <h1 className="bg-[#139BFD] gill-sans text-white font-medium text-center w-full p-3 text-2xl rounded-tl-lg rounded-tr-lg">Get in touch with me</h1>
+                    <div className="lg:w-[380px] md:w-[320px] w-[280px] bg-[#06131B] absolute left-12 -bottom-4 animate__animated animate__fadeInUp rounded-xl">
+                        <h1 className="bg-[#139BFD] gill-sans text-white font-medium text-center w-full p-3 lg:text-2xl text-xl rounded-tl-lg rounded-tr-lg">Get in touch with me</h1>
 
-                        <p className="text-gray-300 text-xl gill-sans text-center px-8 my-8">
+                        <p className="text-gray-300 lg:text-xl md:text-lg text-base gill-sans text-center px-8 my-4">
                             Please fill out the form below to start chatting with me directly.
                         </p>
                         <div className="w-full px-4 mb-6">
-                            <div className="border border-[#042338] px-4 flex flex-col rounded-xl space-y-6 py-6">
+                            <form className="border border-[#042338] px-4 flex flex-col rounded-xl space-y-2 py-6">
                                 <input type="text" name="fullname" placeholder="Your name" className="p-3 border border-[#042338] rounded-xl outline outline-2 outline-transparent focus:outline-[#139BFD] focus:outline-2 input-placeholder" required />
 
                                 <input type="email" name="email" placeholder="Your email" className="p-3 border border-[#042338] rounded-xl outline outline-2 outline-transparent focus:outline-[#139BFD] focus:outline-2 input-placeholder" requird />
@@ -139,14 +137,14 @@ const Homepage = () => {
                                 <button type="submit" className="gill-sans text-xl font-medium text-white text-center bg-transparent px-4 py-3 text-base border border-gray-200 shadow-lg rounded-xl cursor-pointer container-gradient transition-all duration-300 ease-in-out">
                                     Send Message
                                 </button>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 }
             </div>
 
-            <Link href="https://wa.me/8104301385?text=hi" target="_blank" rel="noopener noreferrer" className="w-[50px] h-[50px] fixed bottom-16 right-4 z-[1] bg-[#139BFD] shadow-lg p-4 rounded-full flex justify-center items-center cursor-pointer animate__animated animate__fadeInUp hover:bg-transparent" onClick={playSound}>
-                <i className="ri-whatsapp-line text-white text-xl"></i>
+            <Link href="https://wa.me/+918104301385?text=hi" target="_blank" rel="noopener noreferrer" className="w-[50px] h-[50px] fixed bottom-4 right-4 z-[1] bg-[#29AF3E] shadow-lg p-4 rounded-full flex justify-center items-center cursor-pointer animate__animated animate__fadeInUp hover:bg-white" onClick={playSound}>
+                <i className="ri-whatsapp-line text-white text-2xl font-medium hover:text-[#29AF3E]"></i>
             </Link>
         </div>
     )

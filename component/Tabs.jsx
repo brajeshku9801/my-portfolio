@@ -8,7 +8,7 @@ const Tabs = () => {
 
     return (
         <div className="w-full my-8">
-            <div className="flex justify-center gap-3 border-gray-300 pb-2">
+            <div className="flex flex-wrap justify-center gap-3 border-gray-300 pb-2">
                 <button
                     onClick={() => setActiveTab("tab1")}
                     className={`cursor-pointer shadow-lg px-6 py-3 text-base font-medium rounded-lg 
@@ -174,7 +174,7 @@ const Tabs = () => {
                 )}
 
                 {activeTab === "tab2" && (
-                    <div className="grid grid-cols-2 gap-8 px-4 animate__animated animate__zoomIn">
+                    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-8 lg:px-4 px-0 animate__animated animate__zoomIn">
                         <Card
                             hoverable
                             style={{ width: '100%', padding: '10px', background: '#06131B', border: '1px solid #042338' }}
@@ -259,7 +259,7 @@ const Tabs = () => {
                 )}
 
                 {activeTab === "tab3" && (
-                    <div className="grid grid-cols-2 gap-8 px-4 animate__animated animate__zoomIn">
+                    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-8 lg:px-4 px-0 animate__animated animate__zoomIn">
                         <Card
                             hoverable
                             style={{ width: '100%', padding: '10px', background: '#06131B', border: '1px solid #042338' }}
@@ -290,7 +290,7 @@ const Tabs = () => {
                 )}
 
                 {activeTab === "tab4" && (
-                    <div className="grid grid-cols-2 gap-8 px-4 animate__animated animate__zoomIn">
+                    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-8 lg:px-4 px-0 animate__animated animate__zoomIn">
                         <Card
                             hoverable
                             style={{ width: '100%', padding: '10px', background: '#06131B', border: '1px solid #042338' }}
@@ -348,7 +348,7 @@ const Tabs = () => {
                 )}
 
                 {activeTab === "tab5" && (
-                    <div className="grid grid-cols-2 gap-8 px-4 animate__animated animate__zoomIn">
+                    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-8 lg:px-4 px-0 animate__animated animate__zoomIn">
                         <Card
                             hoverable
                             style={{ width: '100%', padding: '10px', background: '#06131B', border: '1px solid #042338' }}
@@ -406,7 +406,7 @@ const Tabs = () => {
                 )}
 
                 {activeTab === "tab6" && (
-                    <div className="grid grid-cols-2 gap-8 px-4 animate__animated animate__zoomIn">
+                    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-8 lg:px-4 px-0 animate__animated animate__zoomIn">
                         <Card
                             hoverable
                             style={{ width: '100%', padding: '10px', background: '#06131B', border: '1px solid #042338' }}

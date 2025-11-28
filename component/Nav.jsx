@@ -21,7 +21,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className={`w-full py-3 sticky top-0 z-50 transition-all duration-300 ${isScroll ? 'bg-[#010C14] shadow-lg' : 'bg-[#032A42]'}`}>
+        <header className={`w-full py-3 fixed top-0 z-50 transition-all duration-300 ${isScroll ? 'bg-[#010C14] shadow-lg' : 'bg-[#032A42]'}`}>
 
             <nav className="w-11/12 flex justify-between items-center mx-auto">
 
@@ -37,19 +37,19 @@ const Navbar = () => {
 
                 <div className="lg:flex gap-2 text-white sans-serif font-semibold text-lg lg:block hidden">
 
-                    <h1 className="px-4 py-2 rounded-md cursor-pointer 
-              transition-all duration-300 text-[#13A2FD] bg-[#042338]">Home</h1>
-                    <h1 className="px-4 py-2 rounded-md cursor-pointer 
-              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338]">About</h1>
+                    <Link href="/" className="px-4 py-2 rounded-md cursor-pointer 
+              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338] focus:text-[#13A2FD] focus:bg-[#042338]">Home</Link>
+                    <Link href="#about" className="px-4 py-2 rounded-md cursor-pointer 
+              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338] focus:text-[#13A2FD] focus:bg-[#042338]">About</Link>
 
-                    <h1 className="px-4 py-2 rounded-md cursor-pointer 
-              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338]">Services</h1>
+                    <Link href="#services" className="px-4 py-2 rounded-md cursor-pointer 
+              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338] focus:text-[#13A2FD] focus:bg-[#042338]">Services</Link>
 
-                    <h1 className="px-4 py-2 rounded-md cursor-pointer 
-              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338]">Portfolio</h1>
+                    <Link href="#portfolio" className="px-4 py-2 rounded-md cursor-pointer 
+              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338] focus:text-[#13A2FD] focus:bg-[#042338]">Portfolio</Link>
 
-                    <h1 className="px-4 py-2 rounded-md cursor-pointer 
-              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338]">Contact</h1>
+                    <Link href="#contact" className="px-4 py-2 rounded-md cursor-pointer 
+              transition-all duration-300 hover:text-[#13A2FD] hover:bg-[#042338] focus:text-[#13A2FD] focus:bg-[#042338]">Contact</Link>
                 </div>
 
                 <div className="flex gap-4">
@@ -77,7 +77,7 @@ const Navbar = () => {
                                 <h1 className="text-[#13A2FD]">Brajesh</h1>
                             </div>
                         }
-                        width={360}
+                        width={320}
                         placement="left"
                         onClose={() => setOpen(false)}
                         open={open}
@@ -90,19 +90,19 @@ const Navbar = () => {
                         }}
                     >
                         <div className="flex flex-col space-y-2 text-lg monospace">
-                            <Link href="#home" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans">
+                            <Link href="/" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans" onClick={() => setOpen(false)}>
                                 <i className="ri-home-7-fill text-white mr-4"></i> HOME
                             </Link>
-                            <Link href="#about" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans">
+                            <Link href="#about" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans" onClick={() => setOpen(false)}>
                                 <i className="ri-price-tag-3-line text-white mr-4"></i> ABOUT
                             </Link>
-                            <Link href="#services" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans">
+                            <Link href="#services" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans" onClick={() => setOpen(false)}>
                                 <i className="ri-login-circle-fill text-white mr-4"></i> SERVICES
                             </Link>
-                            <Link href="#portfolio" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans">
+                            <Link href="#portfolio" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans" onClick={() => setOpen(false)}>
                                 <i className="ri-registered-fill text-white mr-4"></i> PORTFOLIO
                             </Link>
-                            <Link href="#contact" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans">
+                            <Link href="#contact" className="border border-b-[#0E4464] border-t-0 border-l-0 border-r-0 pb-2 !text-gray-200 gill-sans" onClick={() => setOpen(false)}>
                                 <i className="ri-phone-fill text-white mr-4"></i> CONTACT
                             </Link>
                         </div>

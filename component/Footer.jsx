@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link"
 
 const Footer = () => {
@@ -5,7 +6,7 @@ const Footer = () => {
         <div className="w-full footer-section">
             <footer className="w-11/12 mx-auto py-16 px-8 text-white">
                 <div className="grid lg:grid-cols-12 md:grid-cols-3 grid-cols-1 gap-4">
-                    <div className="lg:col-span-3 space-y-8">
+                    <div className="lg:col-span-3 space-y-8 mb-8">
                         <div className="flex items-center space-x-2">
                             <div className="w-[40px] h-[40px]">
                                 <img src="/images/logo4.png" alt="my-logo" className="w-full h-full rounded-full object-cover" />
@@ -26,7 +27,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-2 space-y-8">
+                    <div className="lg:col-span-2 space-y-8 mb-8">
                         <h3 className="font-semibold text-2xl gill-sans mb-8">Quick Links</h3>
                         <ul className="space-y-3 font-medium text-gray-200 text-lg gill-sans">
                             <li>
@@ -47,7 +48,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="lg:col-span-3 space-y-4">
+                    <div className="lg:col-span-3 space-y-4 mb-8">
                         <h3 className="font-semibold text-2xl gill-sans mb-8">Contact</h3>
                         <div className="flex items-center space-x-3">
                             <button className="w-[40px] h-[40px] rounded-full border border-[#042338] flex justify-center items-center shadow-lg text-white font-semibold">
@@ -84,7 +85,7 @@ const Footer = () => {
                 </div>
                 <hr className="w-full mt-16 mb-8 border border-[#042338]" />
                 <div className="flex lg:flex-row md:flex-row flex-col lg:justify-between md:justify-between justify-center">
-                    <span className="text-base text-gray-400 gill-sans">© 2025 Marketify Inc. All Rights Reserved.</span>
+                    <span className="text-sm text-gray-400 gill-sans">© 2025 Marketify Inc. All Rights Reserved.</span>
                     <div className="space-x-4 text-sm sans-serif font-medium">
                         <button className="cursor-pointer hover:text-[#139BFD]">Terms & Conditions</button>
                         <button className="cursor-pointer hover:text-[#139BFD]">Privacy Policy</button>

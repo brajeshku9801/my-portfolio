@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div className="w-11/12 grid grid-cols-12 py-16 mx-auto text-white">
+        <div className="w-11/12 grid grid-cols-12 py-16 mx-auto text-white" id="about">
             <div className="lg:col-span-6 col-span-12 lg:px-6 md:px-8 px-0 lg:mb-0 mb-16">
                 <div className="skill-section px-4 py-16 shadow-lg rounded-xl border border-cyan-500 flex flex-col justify-center items-center gap-6 box-bg-gradient container-gradient mb-8">
                     <h1 className="lg:text-8xl md:text-8xl text-6xl font-semibold">02 +</h1>
@@ -18,10 +18,10 @@ const About = () => {
             </div>
             <div className="lg:col-span-6 col-span-12 lg:px-6 md:px-6 px-0">
                 <p className="text-[#13A2FD] font-medium text-xl gill-sans">ABOUT ME</p>
-                <h1 className="text-white font-bold lg:text-5xl md:text-6xl text-4xl my-6 gill-sans">
+                <h1 className="text-white font-bold lg:text-5xl md:text-5xl text-4xl my-6 gill-sans">
                     Boost Business Strategic Solutions with Us
                 </h1>
-                <p className="text-gray-300 lg:text-xl md:text-2xl text-lg gill-sans font-medium text-justify">
+                <p className="text-gray-300 lg:text-xl md:text-xl text-lg gill-sans font-medium text-justify">
                     Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational
                 </p>
                 <div className="flex lg:flex-row md:flex-row flex-col my-8 gap-6">
@@ -34,7 +34,7 @@ const About = () => {
                                 <h1 className="text-4xl font-semibold gill-sans">Business</h1>
                             </div>
                         </div>
-                        <p className="mt-6 text-gray-300 text-2xl gill-sans">
+                        <p className="mt-6 text-gray-300 text-xl gill-sans">
                             Each one showcases my approach
                         </p>
                     </div>
@@ -47,7 +47,7 @@ const About = () => {
                                 <h1 className="text-4xl font-semibold gill-sans">Partners</h1>
                             </div>
                         </div>
-                        <p className="mt-6 text-gray-300 text-2xl gill-sans">
+                        <p className="mt-6 text-gray-300 text-xl gill-sans">
                             Business consulting consul us to a provide
                         </p>
                     </div>
